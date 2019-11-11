@@ -1,0 +1,27 @@
+﻿
+
+<html>
+@model List<PracticaPersona.Models.Persona>
+<body>
+    <h2>Personas</h2>
+    <div>
+        @{
+
+            var grid = new WebGrid(Model, defaultSort: "Sexo");
+
+
+        }
+        @grid.GetHtml(columns: grid.Columns(
+                grid.Column("Sexo", header: "Sexo"),
+                grid.Column("Nombres", header: "Nombres"),
+                grid.Column("Apellido", header: "Apellido"),
+                grid.Column("Telefono", header: "Telefono"),
+                grid.Column("Direccion", header: "Direccion"),
+                grid.Column("Cedula", header: "Cedula")
+
+                ))
+    </div>
+   
+
+</body>
+</html>
